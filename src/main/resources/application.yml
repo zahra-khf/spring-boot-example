@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+   datasource:
+     url: jbdc:postgresql://localhost:5332/customer
+     username: amigoscode
+     password: password
+     driverClassName: org.postgresql.Driver
+   jpa:
+     hibernate:
+       ddl-auto: create-drop
+     properties:
+       hibernate:
+         dialect: org.hibernate.dialect.PostgreSQLDialect
+         format_sql: true
+     show-sql: true
+
+   main:
+     web-application-type: servlet
